@@ -5,27 +5,35 @@
     <title>Title</title>
 </head>
 <style>
-    #d_background{font-family:"Microsoft YaHei";margin:0 auto; height: 400px;width: 400px;background: lightgray;border-radius: 50%;position: relative;}
+    #d_background{font-family:"Microsoft YaHei";margin:0 auto; height: 400px;width: 400px;background: lightgray;border-radius: 50%;position: relative;margin-top:150px}
     #d_pointer{position: absolute;z-index: 2;transform-origin: bottom;}
-    #d_hour{animation: number;animation-fill-mode: forwards;animation-duration: 2s;transform-origin:50% 100%;height:130px;width:10px;background: black;position: absolute;left:195px;top:70px;border-radius: 5px;}
-    #d_minute{animation: number;animation-fill-mode: forwards;animation-duration: 2s;transform-origin:50% 100%;height:155px;width:6px;background: gray;position: absolute;left:197px;top:45px;border-radius: 3px;}
+    #d_hour{animation: number 2s ease;animation-fill-mode: forwards;transform-origin:50% 100%;height:130px;width:10px;background: black;position: absolute;left:195px;top:70px;border-radius: 5px;}
+    #d_minute{animation: number 2s ease;animation-fill-mode: forwards;transform-origin:50% 100%;height:155px;width:6px;background: gray;position: absolute;left:197px;top:45px;border-radius: 3px;}
     #d_second{transition:transform 0.5s;transform-origin:50% 100%;height:180px;width:2px;background: red;position: absolute;left:199px;top:20px;border-radius: 1px;}
-    #d_date{animation: show; animation-duration: 2s; animation-fill-mode:forwards; width: 100px;height:35px;box-shadow: 0 0 2px 2px blue; background: white;position: absolute;bottom:100px;left:150px;text-align: center;font-size: 25px}
-    .d_number{animation: number;animation-fill-mode: forwards;animation-duration: 2s;}
+    #d_date{ width: 200px;height:35px;line-height: 35px;position: absolute;bottom:100px;left:100px;text-align: center;font-size: 25px}
+    .d_number{animation: number 2s ease;animation-fill-mode: forwards;}
+    #d_monthborder{background: white;overflow: hidden;width:30px;border:1px solid gray;border-radius: 5px; height: 100%;display: inline-block;position: relative;top:10px;}
+    #d_dayborder{background: white;overflow: hidden;width:30px;border:1px solid gray;border-radius: 5px;height: 100%;display: inline-block;position: relative;top:10px;}
+    #d_month{position: absolute;animation: changenumber 2s ease;}
+    #d_day{position: absolute;animation: changenumber 2s ease;}
     @keyframes number {
         from{
             transform: rotate(0deg);
         }
     }
-    @keyframes show {
+    @keyframes changecolor {
         from{
-            transform: scale(0.1) rotate(0deg);
+            box-shadow: 0 0 2px 2px blue;
         }
         to{
-            transform: scale(1) rotate(360deg);
+            box-shadow: 0 0 2px 2px red;
         }
     }
-
+    @keyframes changenumber {
+        from{
+            top:0px;
+        }
+    }
 </style>
 <body>
     <div id="d_background">
@@ -34,8 +42,17 @@
             <div id="d_minute"></div>
             <div id="d_second"></div>
         </div>
-        <div id="d_date"></div>
+        <div id="d_date">
+            <div id="d_monthborder">
+                <div id="d_month"></div>
+            </div>
+            月
+            <div id="d_dayborder">
+                <div id="d_day"></div>
+            </div>
+            日
+        </div>
     </div>
-    <script src="pra.js"></script>
+    <script src="clock.js"></script>
 </body>
 </html>

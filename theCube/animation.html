@@ -8,19 +8,19 @@
     #d_container{text-align: center;position: relative;transform-origin:50% 50%; animation: show 5s linear infinite  ;animation-fill-mode:forwards; height:400px;width:400px;margin:0 auto;top:200px;transform-style:preserve-3d;}
     @keyframes show {
         from{
-            transform: rotate3d(1,1,1,45deg);
+            transform:perspective(2000px) rotate3d(1,1,1,45deg);
         }
         to {
-            transform: rotate3d(1,1,1,405deg);
+            transform:perspective(2000px) rotate3d(1,1,1,405deg);
         }
     }
-    .d_piece{height:400px;width:400px;position:absolute;left:0px;top:0px;border: 1px solid black}
-    #d_top{background: rgba(255,0,0,0.9);transform:rotateX(90deg) translateZ(200px);}
-    #d_bottom{background: rgba(255,255,0,0.9);transform: rotateX(-90deg) translateZ(200px);}
-    #d_left{background: rgba(0,255,255,0.9);transform: rotateY(-90deg) translateZ(200px);}
-    #d_right{background: rgba(255,0,255,0.9);transform: rotateY(90deg) translateZ(200px);}
-    #d_faced{background: rgba(0,255,0,0.9) ;transform: translateZ(200px);}
-    #d_back{background: rgba(0,0,255,0.9);transform:rotateX(180deg) translateZ(200px);}
+    .d_piece{height:400px;width:400px;position:absolute;left:0px;top:0px;border: 1px solid black;border-radius: 50%}
+    #d_top{background:url(pic/1.jpg) 50% 50%;background-size:cover;transform:rotateX(90deg) translateZ(200px);}
+    #d_bottom{background:url(pic/2.jpg) 50% 50%;background-size:cover;transform: rotateX(-90deg) translateZ(200px);}
+    #d_left{background:url(pic/3.jpg) 50% 50%;background-size:cover;transform: rotateY(-90deg) translateZ(200px);}
+    #d_right{background:url(pic/4.jpg) 50% 50%;background-size:cover;transform: rotateY(90deg) translateZ(200px);}
+    #d_faced{background:url(pic/5.jpg) 50% 50%; background-size:cover;transform: translateZ(200px);}
+    #d_back{background:url(pic/6.jpg) 50% 50%;background-size:cover;transform:rotateX(180deg) translateZ(200px);}
 </style>
 <body>
     <div id="d_container">
@@ -31,5 +31,6 @@
         <div id="d_faced" class="d_piece"></div>
         <div id="d_back" class="d_piece"></div>
     </div>
+    <script src="cube.js"></script>
 </body>
 </html>

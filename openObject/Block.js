@@ -13,9 +13,7 @@
             oDiv.style.position="relative";
             oDiv.style.transformStyle="preserve-3d";
             oDiv.onmouseover=function () {
-                this.style.animation="pictureRotate";
-                this.style.animationDuration="1s";
-                this.style.animationFillMode="forwards";
+                this.style.animation="pictureRotate 1s forwards";
             };
            oDiv.onmouseout=function () {
                this.style.animation="pictureRotateBack";
