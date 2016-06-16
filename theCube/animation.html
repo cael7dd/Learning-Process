@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #d_container{text-align: center;position: relative;transform-origin:50% 50%; animation: show 5s linear infinite  ;animation-fill-mode:forwards; height:400px;width:400px;margin:0 auto;top:200px;transform-style:preserve-3d;}
+    @keyframes show {
+        from{
+            transform: rotate3d(1,1,1,45deg);
+        }
+        to {
+            transform: rotate3d(1,1,1,405deg);
+        }
+    }
+    .d_piece{height:400px;width:400px;position:absolute;left:0px;top:0px;border: 1px solid black}
+    #d_top{background: rgba(255,0,0,0.9);transform:rotateX(90deg) translateZ(200px);}
+    #d_bottom{background: rgba(255,255,0,0.9);transform: rotateX(-90deg) translateZ(200px);}
+    #d_left{background: rgba(0,255,255,0.9);transform: rotateY(-90deg) translateZ(200px);}
+    #d_right{background: rgba(255,0,255,0.9);transform: rotateY(90deg) translateZ(200px);}
+    #d_faced{background: rgba(0,255,0,0.9) ;transform: translateZ(200px);}
+    #d_back{background: rgba(0,0,255,0.9);transform:rotateX(180deg) translateZ(200px);}
+</style>
+<body>
+    <div id="d_container">
+        <div id="d_top" class="d_piece"></div>
+        <div id="d_bottom" class="d_piece"></div>
+        <div id="d_left" class="d_piece"></div>
+        <div id="d_right" class="d_piece"></div>
+        <div id="d_faced" class="d_piece"></div>
+        <div id="d_back" class="d_piece"></div>
+    </div>
+</body>
+</html>
