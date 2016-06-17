@@ -87,7 +87,7 @@
             if("obj" in o) {
                 o.rotate = function () {
                     for (var i = 0; i < o.obj.length; i++) {
-                        o.obj[i].style.transition = "transform 1s";
+                        o.obj[i].style.transition = "transform 1s linear";
                         o.obj[i].style.transformStyle = "preserve-3d";
                         o.obj[i].style.transform = "rotate3d("+Math.random()+","+Math.random()+","+
                             Math.random()+"," + Math.random() * 360 + "deg)";
@@ -96,7 +96,7 @@
             }
             else{
                 o.rotate=function () {
-                    o.style.transition = "transform 1s";
+                    o.style.transition = "transform 1s linear";
                     o.style.transformStyle = "preserve-3d";
                     o.style.transform = "rotate3d("+Math.random()+","+Math.random()+","+
                         Math.random()+"," + Math.random() * 360 + "deg)";
@@ -115,7 +115,7 @@
                 // oHour.rotate();
                 // oMinute.rotate();
                 // oSecond.rotate();
-            },700)
+            },1000)
         }
     })();
 })();
