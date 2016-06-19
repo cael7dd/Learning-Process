@@ -24,8 +24,8 @@
       <file leaf-file-name="eyes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eyes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="162">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -34,8 +34,8 @@
       <file leaf-file-name="eyes.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/eyes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="106" selection-start-line="10" selection-start-column="106" selection-end-line="10" selection-end-column="106" />
+            <state relative-caret-position="0">
+              <caret line="0" column="73" selection-start-line="0" selection-start-column="73" selection-end-line="0" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -67,8 +67,8 @@
       <list>
         <option value="$PROJECT_DIR$/111.js" />
         <option value="$PROJECT_DIR$/111.html" />
-        <option value="$PROJECT_DIR$/eyes.html" />
         <option value="$PROJECT_DIR$/eyes.js" />
+        <option value="$PROJECT_DIR$/eyes.html" />
         <option value="$PROJECT_DIR$/eyes.css" />
       </list>
     </option>
@@ -215,15 +215,15 @@
       <workItem from="1466258164698" duration="182000" />
       <workItem from="1466258377538" duration="9000" />
       <workItem from="1466297424355" duration="1647000" />
-      <workItem from="1466299166145" duration="3314000" />
+      <workItem from="1466299166145" duration="4553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25017000" />
+    <option name="totallyTimeSpent" value="26256000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1612" height="877" extended-state="1" />
+    <frame x="-7" y="0" width="1612" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -396,14 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eyes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eyes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
@@ -412,10 +404,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/eyes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/eyes.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="106" selection-start-line="10" selection-start-column="106" selection-end-line="10" selection-end-column="106" />
+        <state relative-caret-position="0">
+          <caret line="0" column="73" selection-start-line="0" selection-start-column="73" selection-end-line="0" selection-end-column="73" />
           <folding />
         </state>
       </provider>
