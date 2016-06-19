@@ -24,7 +24,6 @@
                 lists[i].onclick=function (m) {
                     return function () {
                         that.board.style.background=that.Color[m];
-                        console.log(that.Color[m]);
                     }
                 }(i);
             }
@@ -39,7 +38,6 @@
             oDivList.style.left = event.clientX + "px";
             oDivList.style.top = event.clientY + "px";
             oDivList.style.display = "block";
-            console.log(event.clientX);
         });
         window.addEventListener("click", function (event) {
             oDivList.style.display = "none";
