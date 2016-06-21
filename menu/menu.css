@@ -1,4 +1,4 @@
-#d_container{width: 400px;height:400px;background: whitesmoke;}
-#d_menu{height: 252px;width: 129px;border: 1px solid #bababa;position: absolute;background: white;display: none}
+.d_container{width: 400px;height:400px;background: whitesmoke;}
+.d_menu{width: 129px;border: 1px solid #bababa;position: absolute;background: white;display: none}
 .a_menu{height: 28px;width: 95px;font-size: 14px;color:black;padding-left: 34px;line-height: 28px;display: block;text-decoration: none;}
 .a_menu:hover{background: #4281f4;color:white}
