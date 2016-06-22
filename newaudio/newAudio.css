@@ -1,0 +1,32 @@
+#d_container{background: #464745;width: 728px;margin: 0 auto;margin-top: 100px;border-radius: 5px;cursor: default;
+    box-shadow: 5px 5px 20px 0px #212121;}
+#d_controls{width: 100%;height: 75px;}
+#d_last{width: 20px;height: 20px;background: url(images/1.png) no-repeat -492px -1092px;float: left;cursor: pointer;margin-top: 29px;margin-left: 24px;}
+#d_play{width: 30px;height: 40px;float: left;margin-top:20px;background:url(images/1.png) no-repeat -446px -276px;cursor: pointer;margin-left: 31px;}
+#d_next{width: 20px;height: 20px;background: url(images/1.png) no-repeat -372px -1081px;float: left;cursor: pointer;margin-top: 29px;margin-left: 28px;}
+#d_progressContainer{width: 400px;height: 100%;float: left;margin-left: 28px;}
+#d_songName{width:270px;height: 40px;font-size: 14px;line-height: 40px;font-family:"Microsoft YaHei";
+    color: white;float: left}
+#d_playStyle{float: left;margin-top: 10px;margin-left: 31px;}
+.d_playStyleBtn{width: 18px;height: 15px;float: left;background-image: url(images/1.png);background-repeat: no-repeat;margin: 6px;cursor: pointer;}
+#d_random{background-position: -72px -1104px;}
+#d_onlyOne{background-position: -72px -1080px;}
+#d_cycle{background-position: -72px -288px;background-image: url(images/2.png);}
+#d_progress{width: 310px;height: 5px;border-radius: 5px;border: 1px solid #161716;margin-top: 7px;
+    background: #625f5a;position: relative;float:left;cursor: pointer}
+#d_pointer{width: 16px;height: 16px;border-radius: 50%;background: #edecea;position: absolute;
+    top:-6px;left:-8px;z-index: 2;cursor: pointer;box-shadow: 0px 1px 2px 1px #212121;}
+#d_played{height: 100%;width:0px;position: relative;background: #0093d6;border-radius: 5px;}
+#d_time{width: 78px;height: 24px;font-size: 12px;font-family: "Microsoft YaHei";color:white;float:left;
+    margin-left: 8px;line-height: 20px;}
+#d_volumeContainer{float: left;width:106px;height: 100%;margin-left: 15px }
+#d_horn{width: 15px;height: 15px;float: left;background: url("images/1.png") no-repeat -240px -1080px;margin-top: 42px;cursor: pointer}
+#d_volume{width: 80px;height: 4px;cursor: pointer;border-radius: 2px;background: white;position: relative;
+    margin-top: 48px;float: left;margin-left: 10px;}
+#d_volumePointer{width: 12px;height: 12px;box-shadow: 0px 1px 1px 1px #212121;position: absolute;
+    border-radius: 50%;background: white;top:-4px;right: -6px;cursor: pointer;}
+#d_lyrics{width: 100%;height: 430px;text-align: center;background: #f8f8f8;position: relative;
+    font-family: "Microsoft YaHei";font-size: 16px;overflow: hidden;border-radius: 0px 0px 5px 5px;}
+#d_lyricsText{position: absolute;width: 100%;color: black;top:200px;transition: top,0.3s;}
+#d_lyricsNow{font-size: 20px;color: #0093d6;}
+.d_lyricsPlayed{color:gray;}
