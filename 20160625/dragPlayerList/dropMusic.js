@@ -3,47 +3,40 @@
  */
 window.ucai=window.ucai||{};
 (function () {
-    function DropList(dom,list) {
-        var player=new FileReader;
-
-        var currentAudio;
-        player.onload=function () {
-            if(currentAudio){
-                currentAudio.parentNode.removeChild(currentAudio);
-            }
-            currentAudio=document.createElement("audio");
-            currentAudio.autoplay="autoplay";
-            currentAudio.src=player.result;
-            currentAudio.controls="controls";
-            document.body.appendChild(currentAudio);
-        };
-        dom.ondragover=function (event) {
+    function DropMusic() {
+        this.getNode();
+        this.addListener();
+    }
+    DropMusic.prototype.getNode=function () {
+        this._NodePlayer=document.getElementById("audio");
+        this._NodeContainer=document.getElementById("d_list");
+        this._NodeList=document.getElementById("d_list");
+    };
+    DropMusic.prototype.addListener=function () {
+        this._NodeContainer.ondragover=function (event) {
             event.preventDefault();
         };
-        dom.ondrop=function (event) {
-            var name=[];
-            var filesNumber=[];
+        this._NodeContainer.ondrop=function (event) {
             event.preventDefault();
-            var files=event.dataTransfer.files;
-            for(var i=0;i<files.length;i++){
-                if(files[i].type="audio/mp3"){
-                    name.push(files[i].name);
-                    filesNumber.push(i);
-                }
-            }
-            for(i=0;i<name.length;i++){
-                var div=document.createElement("div");
-                div.className="d_item";
-                div.innerHTML=name[i];
-                list.appendChild(div);
-                (function (m) {
-                    div.onclick=function () {
-                        console.log(files);
-                        player.readAsDataURL(files[filesNumber[m]]);
-                    };
-                })(i);
+            this.getFiles(event.dataTransfer.files);
+        }.bind(this);
+    };
+    DropMusic.prototype.getFiles=function (files) {
+        var self=this;
+        function readFile(file) {
+            var reader=new FileReader();
+            reader.onload=function () {
+                self._NodePlayer.src=reader.result;
+            };
+            reader.readAsDataURL(file);
+        }
+        for(var i=0;i<files.length;i++){
+            if(files[i].type=="audio/mp3"){
+                var song=new ucai.SongList(files[i],this._NodeList);
+                song.onSelect=readFile;
             }
         }
-    }
-    ucai.DropList=DropList;
+    };
+    new DropMusic();
+
 })();
