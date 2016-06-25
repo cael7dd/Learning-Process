@@ -5,9 +5,10 @@ window.ucai=window.ucai||{};
 (function () {
     function GetIniData(file) {
         $.get(file).done(function (data) {
-            this.data=data;
-            ucai.classifyData.call(this);
-            console.log(this.obj);
+            
+            var a =new ucai.classifyData(data);
+            this.iniResult=a.obj;
+            console.log(a.obj);
         }.bind(this))
     }
     ucai.getIniData=GetIniData;

@@ -4,7 +4,7 @@
 window.ucai=window.ucai||{};
 (function () {
     function main() {
-        var obj=new ucai.getIniData("test.ini");
+        var a=new ucai.getIniData("test.ini");
     }
     main();
 })();

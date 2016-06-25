@@ -3,14 +3,14 @@
  */
 window.ucai = window.ucai || {};
 (function () {
-    function ClassifyData() {
+    function ClassifyData(data) {
         this.parttenLine=/(.*)\s+/g;
-        this.parttenClassName = /\[(.*)\]/g;
-        this.parttenItemName = /(.*)=(.*)/g;
+        this.parttenClassName = /\[(.*)\]/;
+        this.parttenItemName = /(.*)=(.*)/;
         this.obj = {};
         var temp;
         while (true) {
-            var lineResult = this.parttenLine.exec(this.data);
+            var lineResult = this.parttenLine.exec(data);
             if (!lineResult) {
                 break;
             }
@@ -21,7 +21,7 @@ window.ucai = window.ucai || {};
             }
             else{
                 var itemResult=this.parttenItemName.exec(lineResult[1]);
-                console.log(lineResult[1],">>>",itemResult);
+                this.obj[temp][itemResult[1]]=itemResult[2];
             }
         }
     }
