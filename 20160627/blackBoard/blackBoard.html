@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body onselectstart="return false" ondragstart="return false">
+    <div id="d_container">
+        <canvas width="800" height="500" id="blackBoard"></canvas>
+        <div id="d_btnContainer">
+            <div id="d_iptColorContainer">
+                <input id="ipt_color" type="button">
+                <div id="d_colorList">
+                    <div class="d_color" id="d_white"></div>
+                    <div class="d_color" id="d_red"></div>
+                    <div class="d_color" id="d_blue"></div>
+                    <div class="d_color" id="d_green"></div>
+                    <div class="d_color" id="d_yellow"></div>
+
+                </div>
+            </div>
+            <input type="button" id="btnClear" value="擦除">
+            <input type="radio" id="iptPen" name="penOrEraser" checked="checked">
+            <label for="iptPen" >粉笔</label>
+            <input type="radio" id="iptEraser" name="penOrEraser">
+            <label for="iptEraser">黑板擦</label>
+
+            <div id="d_lineWidthContainer">
+
+                <div id="d_lineWidthPointer"></div>
+            </div>
+            <span id="s_lineWidth">线宽</span>
+        </div>
+    </div>
+    <script src="DrewPen.js"></script>
+    <script src="PenColor.js"></script>
+    <script src="BlankCanvas.js"></script>
+    <script src="IptPen.js"></script>
+    <script src="Eraser.js"></script>
+    <script src="LineWidth.js"></script>
+    <script src="IptEraser.js"></script>
+
+    <script src="Main.js"></script>
+</body>
+</html>
