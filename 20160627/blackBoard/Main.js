@@ -20,7 +20,7 @@ window.ucai = window.ucai || {};
         new ucai.BlankCanvas(this.canvas,this.context,this.btnClear);
         new ucai.IptPen(this.iptPen,this.context, this.canvas);
         new ucai.IptEraser(this.iptEraser,this.context, this.canvas);
-
+        this._context.strokeStyle="#fff";
     }
     Object.defineProperties(Main.prototype, {
         "context": {

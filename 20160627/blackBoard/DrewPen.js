@@ -10,8 +10,6 @@ window.ucai=window.ucai||{};
         this.addListener();
     }
     DrewPen.prototype.addListener=function () {
-        this._context.strokeStyle="#fff";
-        this._context.lineWidth="1";
         this._node.onmousedown=function (event) {
             this._context.beginPath();
             this._context.moveTo(event.clientX-this._nodePosition.left-27,event.clientY-this._nodePosition.top-27);
