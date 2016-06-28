@@ -12,11 +12,15 @@ window.ucai = window.ucai || {};
         this._btnClear=document.getElementById("btnClear");
         this._iptEraser=document.getElementById("iptEraser");
         this._iptPen=document.getElementById("iptPen");
+        this.lineProgress=document.getElementById("d_lineWidthContainer");
+        this.linePointer=document.getElementById("d_lineWidthPointer");
+        new ucai.LineWidth(this.lineProgress,this.linePointer,this.context);
         new ucai.DrewPen(this.context, this.canvas);
         new ucai.PenColor(this.context, this.btnChangColor, this.colors, this.colorsContainer);
         new ucai.BlankCanvas(this.canvas,this.context,this.btnClear);
         new ucai.IptPen(this.iptPen,this.context, this.canvas);
         new ucai.IptEraser(this.iptEraser,this.context, this.canvas);
+
     }
     Object.defineProperties(Main.prototype, {
         "context": {
