@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="ImageAdder.js"></script>
+    <script src="ShowedArc.js"></script>
+    <script src="RadiusChanger.js"></script>
+    <script src="Cover.js"></script>
+    <script src="ShowedHeadSculpture.js"></script>
+
+
+</head>
+<style>
+    body{
+        overflow: hidden;
+    }
+    #canvas {
+        float: left;
+    }
+    #d_container{
+        float: left;
+        height: 600px;
+        position: relative;
+        margin-left: 20px;;
+    }
+    .can {
+       display: block;
+        position: absolute;
+        transform-origin: 0 0;
+    }
+    #sculpture100{
+        top:305px;
+        left:50px;
+    }
+    #sculpture50{
+        top:510px;
+        left:95px;
+    }
+</style>
+<body>
+<div style="overflow: hidden">
+    <canvas width="800" height="600" id="canvas"></canvas>
+    <div id="d_container">
+        <canvas id="sculpture200" class="can"></canvas>
+        <canvas id="sculpture100" class="can"></canvas>
+        <canvas id="sculpture50" class="can"></canvas>
+    </div>
+</div>
+
+
+
+<div id="d_flash"></div>
+<script src="Main.js"></script>
+</body>
+</html>
