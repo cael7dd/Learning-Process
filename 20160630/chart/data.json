@@ -1,0 +1,26 @@
+{
+  "HTML": {
+    "Chrome": 98,
+    "Firefox": 95,
+    "IE": 20,
+    "Edge": 50
+  },
+  "CSS": {
+    "Chrome": 96,
+    "Firefox": 99,
+    "IE": 10,
+    "Edge": 70
+  },
+  "JS": {
+    "Chrome": 92,
+    "Firefox": 94,
+    "IE": 35,
+    "Edge": 80
+  },
+  "Jquery": {
+    "Chrome": 97,
+    "Firefox": 92,
+    "IE": 56,
+    "Edge": 85
+  }
+}
