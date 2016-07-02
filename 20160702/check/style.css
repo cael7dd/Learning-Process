@@ -1,0 +1,34 @@
+body{cursor: default}
+#table{margin: 0 auto;width: 600px;text-align: center}
+#tableContainer{height: 600px;}
+#d_state1{width:200px;height: 25px;color: red;animation: disappear 2s forwards}
+#d_state2{width:200px;height: 25px;color: green;animation: disappear 2s forwards}
+.iptSituation{border: 0;width:100px;height: 100%}
+th{width: 100px;}
+input{transition: box-shadow .5s;outline: none;border: 1px solid gray;}
+input:focus{box-shadow: 0 0 5px 2px #f30;}
+form input:focus{border: 1px solid #ff3300;}
+.iptDelete{cursor: pointer}
+.iptDelete:hover{color:red}
+
+#form{margin: 0 auto;display: block;width: 923px;}
+@keyframes disappear {
+    from{
+        visibility: visible;
+    }
+    to{
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
