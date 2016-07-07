@@ -41,7 +41,6 @@ window.ucai = window.ucai || {};
         this.currentTime = time;
         this.context.drawImage(this.video, 0, 0);
         requestAnimationFrame(this.render.bind(this));
-
     };
     new Main();
 })();
