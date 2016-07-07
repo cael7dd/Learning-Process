@@ -6,6 +6,7 @@
         var divs=$("div");
         var colors=[];
         var backColors=[];
+
         for(var i=0;i<divs.length;i++){
             colors.push($(divs[i]).css("background-color"));
             backColors.push(randomColor());
@@ -15,6 +16,7 @@
                 })
             })(i);
         }
+        $(this).slideDown();
     }
     function randomColor() {
         return "rgb("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+")";
