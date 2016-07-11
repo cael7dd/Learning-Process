@@ -32,14 +32,8 @@
     };
     Main.prototype.judgeFlip = function () {
         var iMargin = -this._currentTop / screen.height;
-        if (iMargin - parseInt(iMargin) < 0.5) {
-            this._currentTop = -parseInt(iMargin) * screen.height;
-        }
-        else if (iMargin - parseInt(iMargin) > 0.5) {
-            this._currentTop = -(parseInt(iMargin) + 1) * screen.height;
-        }
-        $(this._domBorder[0]).css({transition: "top 0.3s", top: this._currentTop + "px"});
-
+        this._currentTop = -Math.round(iMargin) * screen.height;
+        $(this._domBorder[0]).css({transition: "top 0.3s", top: this.judgePoi(this._currentTop) + "px"});
     };
     Main.prototype.judgePoi = function (value) {
         if (value > 0) {
@@ -54,18 +48,25 @@
         $(document).on("touchstart", function (event) {
             this._startTime = event.timeStamp;
             this._startY = event.originalEvent.targetTouches[0].clientY;
+            this._lastMovePoi=this._startY;
             $(this._domBorder[0]).css({transition: "top 0s"});
         }.bind(this));
         $(document).on("touchmove", function (event) {
             event.preventDefault();
             this._lastMovePoi = event.originalEvent.targetTouches[0].clientY;
             var value = this._currentTop + this._lastMovePoi - this._startY;
-            $(this._domBorder[0]).css({top: this.judgePoi(value) + "px"});
+            if (value > 0) {
+                value = value-value*0.6;
+            }
+            else if (value < -(this._domImages.length - 1) * screen.height) {
+                value = value- (value+(this._domImages.length - 1) * screen.height)*0.6;
+            }
+            $(this._domBorder[0]).css({top: value + "px"});
         }.bind(this));
         $(document).on("touchend", function (event) {
             var endTime = event.timeStamp;
             this._currentTop = parseInt($(this._domBorder[0]).css("top"));
-            if (Math.abs(this._lastMovePoi - this._startY) / (endTime - this._startTime) > 0.5) {
+            if (Math.abs(this._lastMovePoi - this._startY) / (endTime - this._startTime) > 0.5&&this._lastMovePoi - this._startY!=0) {
                 this.judgeSwi();
                 return;
             }
