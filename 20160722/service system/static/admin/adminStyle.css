@@ -1,0 +1,25 @@
+.msgNumber{
+    float: right;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #f30;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+}
+#d_leftList{
+    overflow-y:scroll;
+}
+@keyframes changeRight {
+    from{
+        margin-right: 0;
+    }
+    to{
+        margin-right: 8px;
+    }
+
+}

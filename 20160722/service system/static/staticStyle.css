@@ -1,0 +1,137 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+#container{
+    width: 1000px;
+    height: 700px;
+    box-shadow: 1px 1px 5px 0 #444444;
+    margin: 0 auto;
+    position: relative;
+}
+#h2_head{
+    text-align: center;
+    margin: 10px;
+}
+#d_leftList{
+    height: 100%;
+    width: 230px;
+    border-right: 1px solid #bbb;
+    float: left;
+}
+.d_leftBlock{
+    padding:0 30px;
+    width: 170px;
+    height: 70px;
+    cursor: pointer;
+    line-height: 70px;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.d_leftBlock:hover{
+    background: #bbbbbb;
+}
+#output{
+    height: 480px;
+    padding-top: 20px;
+    border-bottom: 1px solid #bbb;
+    width: 769px;
+    outline: none;
+    float: left;
+    overflow-y:scroll;
+    font-size: 18px;
+}
+#d_inputContainer{
+    width: 769px;
+    height: 200px;
+    float: left;
+}
+#d_toolsContainer{
+    width: 100%;
+    position: relative;
+    height: 30px;
+    background: #eee;
+    border-bottom: 1px solid #bbb;
+}
+#input{
+    width: 100%;
+    height: 140px;
+    resize: none;
+    border: 0;
+    outline: none;
+    display: block;
+}
+.btn_handle{
+    float: right;
+    height: 20px;
+    width: 70px;
+    background: #4c9fb1;
+    border-radius: 4px;
+    color: white;
+    border: 0;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.btn_handle:hover{
+    background: #58cff1;
+}
+#d_tips{
+    position: absolute;
+    width: 770px;
+    height: 20px;
+    background: #58cff1;
+    color: white;
+    font-size: 16px;
+    top:0;
+    right: 0;
+    text-align: center;
+    line-height: 20px;
+}
+.myLines{
+    color: #000066;
+}
+.lines{
+    color: crimson;
+}
+#d_openExpression{
+    height: 28px;
+    width: 28px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 1px;
+    cursor: pointer;
+    position: relative;
+    background: url("1.png") -168px -168px;
+    background-size: 252px 280px;
+}
+#d_expressionContainer{
+    position: absolute;
+    bottom:30px;
+    width: 241px;
+    height: 150px;
+    overflow-y:scroll;
+    left: -90px;
+    padding: 3px;
+    background: white;
+    cursor: default;
+    display: none;
+}
+.d_express{
+    width: 28px;
+    height: 28px;
+    float: left;
+    background-image: url("1.png");
+    background-size: 252px 280px;
+    cursor: pointer;
+}
+.d_lineExpress{
+    width: 28px;
+    height: 28px;
+    background-image: url("1.gif");
+    background-size: 252px 280px;
+    display: inline-block;
+}

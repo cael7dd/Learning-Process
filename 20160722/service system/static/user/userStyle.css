@@ -1,0 +1,10 @@
+#d_leftBlock{
+    padding:0 30px;
+    width: 170px;
+    height: 70px;
+    cursor: pointer;
+    line-height: 70px;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}

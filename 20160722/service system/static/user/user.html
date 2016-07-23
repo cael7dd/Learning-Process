@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="staticStyle.css">
+    <link rel="stylesheet" href="userStyle.css">
+    <script src="socket.io.js"></script>
+</head>
+<body>
+<h2 id="h2_head">hello client</h2>
+<div id="container">
+    <div id="d_leftList">
+        <div id="d_leftBlock"></div>
+    </div>
+    <div id="d_tips"></div>
+    <div id="output"></div>
+    <div id="d_inputContainer">
+        <div id="d_toolsContainer">
+            <div id="d_openExpression">
+                <div id="d_expressionContainer"></div>
+            </div>
+        </div>
+        <textarea  id="input" autofocus="autofocus"></textarea>
+        <button id="btn_send" class="btn_handle">send</button>
+        <button id="btn_clear" class="btn_handle">clear</button>
+    </div>
+</div>
+<script src="userMain.js"></script>
+</body>
+</html>
