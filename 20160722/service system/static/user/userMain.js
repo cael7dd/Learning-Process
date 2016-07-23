@@ -49,12 +49,17 @@
     }
     function getExpression(data) {
         var exp=/([^\$]*)\$([^\#]+)\#\$([^\#]+)\#([^\$]*)/g;
+        var first=true;
         var str="";
         while (true){
             var temp=exp.exec(data);
             if(!temp){
+                if(first){
+                    return data;
+                }
                 break;
             }
+            first=false;
             if(temp[2]&&temp[3]){
                 str+=temp[1]+"<div class='d_lineExpress' style='background-position:"+temp[2]+"px "+temp[3]+"px'></div>"+temp[4];
             }else{
@@ -71,7 +76,7 @@
             socket.emit("chat",input.value);
             var div=document.createElement("div");
             div.className="myLines";
-            div.innerHTML="me:"+getExpression(input.value);
+            div.innerHTML="me&nbsp;:&nbsp;&nbsp;"+getExpression(input.value);
             output.appendChild(div);
             input.value="";
             output.scrollTop=output.scrollHeight;
@@ -79,12 +84,12 @@
         socket.on("chat",function (data) {
             var div=document.createElement("div");
             div.className="lines";
-            div.innerHTML="server:"+getExpression(data);
+            div.innerHTML="server&nbsp;:&nbsp;&nbsp;"+getExpression(data);
             output.appendChild(div);
             output.scrollTop=output.scrollHeight;
         });
         socket.on("accept",function (data) {
-            tips.innerHTML="server "+data+" is served for you!";
+            tips.innerHTML="server&nbsp;&nbsp;"+data+"&nbsp;&nbsp;is&nbsp;&nbsp;served&nbsp;&nbsp;for&nbsp;&nbsp;you!";
             changeLeftBlock(data);
             btnSend.onclick=sendChart;
             document.onkeydown=function (event) {
@@ -95,13 +100,13 @@
             };
         });
         socket.on("declined",function (data) {
-            tips.innerHTML="server "+data+" said:screw you!";
+            tips.innerHTML="server&nbsp;&nbsp;"+data+"&nbsp;&nbsp;said&nbsp;:&nbsp;screw&nbsp;&nbsp;you!";
             clearLeftBlock();
             btnSend.onclick="";
             document.onkeydown="";
         });
         socket.on("none",function () {
-            tips.innerHTML="no services!try again or wait";
+            tips.innerHTML="no&nbsp;&nbsp;services&nbsp;!&nbsp;&nbsp;try&nbsp;&nbsp;again&nbsp;&nbsp;or&nbsp;&nbsp;wait";
         });
     }
     function changeLeftBlock(data) {

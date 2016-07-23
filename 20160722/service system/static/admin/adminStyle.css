@@ -14,6 +14,9 @@
 #d_leftList{
     overflow-y:scroll;
 }
+.d_leftBlock{
+    width: 153px;
+}
 @keyframes changeRight {
     from{
         margin-right: 0;

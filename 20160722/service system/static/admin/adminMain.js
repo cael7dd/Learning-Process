@@ -51,12 +51,17 @@
     }
     function getExpression(data) {
         var exp=/([^\$]*)\$([^\#]+)\#\$([^\#]+)\#([^\$]*)/g;
+        var first=true;
         var str="";
         while (true){
             var temp=exp.exec(data);
             if(!temp){
+                if(first){
+                    return data;
+                }
                 break;
             }
+            first=false;
             if(temp[2]&&temp[3]){
                 str+=temp[1]+"<div class='d_lineExpress' style='background-position:"+temp[2]+"px "+temp[3]+"px'></div>"+temp[4];
             }else{
@@ -74,7 +79,7 @@
             socket.emit("chat","?id:"+currentId+"&"+input.value);
             var div=document.createElement("div");
             div.className="myLines";
-            div.innerHTML="me:"+getExpression(input.value);
+            div.innerHTML="me&nbsp;:&nbsp;&nbsp;"+getExpression(input.value);
             clientsOutput[currentId].appendChild(div);
             output.innerHTML=clientsOutput[currentId].innerHTML;
             input.value=""; 
@@ -86,7 +91,7 @@
             var clientId=temp[1];
             var div=document.createElement("div");
             div.className="lines";
-            div.innerHTML="client:"+getExpression(temp[2]);
+            div.innerHTML="client&nbsp;:&nbsp;&nbsp;"+getExpression(temp[2]);
             clientsOutput[clientId].appendChild(div);
             output.innerHTML=clientsOutput[currentId].innerHTML;
             output.scrollTop=output.scrollHeight;
@@ -97,7 +102,7 @@
         });
         //监听用户连接事件，显示tips，创建左侧用户列表信息
         socket.on("client",function (data) {
-            tips.innerHTML="client "+data+" is looking for help!";
+            tips.innerHTML="client&nbsp;&nbsp;"+data+"&nbsp;&nbsp;is&nbsp;&nbsp;looking&nbsp;&nbsp;for&nbsp;&nbsp;help!";
             if(firstClient){
                 currentId=data;
             }
@@ -114,13 +119,13 @@
         });
         //监听用户离开事件，显示tips，并清除用于暂存消息的div
         socket.on("leave",function (data) {
-            tips.innerHTML="client "+data+" has left!";
+            tips.innerHTML="client&nbsp;&nbsp;"+data+"&nbsp;&nbsp;has&nbsp;&nbsp;left!";
             delete clientsOutput[data];
             clearLeftBlock(data);
         });
         //监听没有用户事件，显示tips
         socket.on("none",function () {
-            tips.innerHTML="no clients!enjoy yourself!";
+            tips.innerHTML="no&nbsp;&nbsp;clients&nbsp;!&nbsp;&nbsp;enjoy&nbsp;&nbsp;yourself&nbsp;!";
             btnSend.onclick="";
             document.onkeydown="";
         });
