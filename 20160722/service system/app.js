@@ -42,9 +42,6 @@ var httpServer=http.createServer((req,res)=> {
         case "/staticStyle.css":
             res.end(fs.readFileSync("static/staticStyle.css"));
             break;
-        case "/11.png":
-            res.end(fs.readFileSync("img/11.png"));
-            break;
         case "/1.png":
             res.end(fs.readFileSync("img/1.png"));
             break;

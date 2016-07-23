@@ -14,6 +14,7 @@
         addListeners();
 
     }
+    //动态添加表情
     function addExpression() {
         var container=document.querySelector("#d_expressionContainer");
         for(var i=0;i<10;i++){
@@ -31,6 +32,7 @@
             }
         }
     }
+    //添加点击表情的事件
     function expressionEvent() {
         var btnExpression=document.querySelector("#d_openExpression");
         var expressionContainer=document.querySelector("#d_expressionContainer");
@@ -42,6 +44,7 @@
             });
         }
     }
+    //获取结点
     function getElement() {
         input=document.querySelector("#input");
         output=document.querySelector("#output");
@@ -49,6 +52,7 @@
         btnClear=document.querySelector("#btn_clear");
         tips=document.querySelector("#d_tips");
     }
+    //提取出发送过来的的消息中的表情代码和其他文字，并对表情代码进行处理
     function getExpression(data) {
         var exp=/([^\$]*)\$([^\#]+)\#\$([^\#]+)\#([^\$]*)/g;
         var first=true;

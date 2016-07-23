@@ -12,6 +12,7 @@
         socket.emit("user");
         addListeners();
     }
+    //动态添加表情
     function addExpression() {
         var container=document.querySelector("#d_expressionContainer");
         for(var i=0;i<10;i++){
@@ -29,6 +30,7 @@
             }
         }
     }
+    //添加表情点击事件
     function expressionEvent() {
         var btnExpression=document.querySelector("#d_openExpression");
         var expressionContainer=document.querySelector("#d_expressionContainer");
@@ -40,6 +42,7 @@
             });
         }
     }
+    //获取结点
     function getElement() {
         input=document.querySelector("#input");
         output=document.querySelector("#output");
@@ -47,6 +50,7 @@
         btnClear=document.querySelector("#btn_clear");
         tips=document.querySelector("#d_tips");
     }
+    //解析消息中的表情代码和其他文本，并对表情代码进行处理
     function getExpression(data) {
         var exp=/([^\$]*)\$([^\#]+)\#\$([^\#]+)\#([^\$]*)/g;
         var first=true;
@@ -68,10 +72,12 @@
         }
         return str;
     }
+    //添加事件监听器
     function addListeners(){
         btnClear.onclick=function () {
             input.value="";
         };
+        //发送消息
         function sendChart() {
             socket.emit("chat",input.value);
             var div=document.createElement("div");
@@ -81,6 +87,7 @@
             input.value="";
             output.scrollTop=output.scrollHeight;
         }
+        //接受收到的chat消息
         socket.on("chat",function (data) {
             var div=document.createElement("div");
             div.className="lines";
@@ -88,6 +95,7 @@
             output.appendChild(div);
             output.scrollTop=output.scrollHeight;
         });
+        //有客服接受请求
         socket.on("accept",function (data) {
             tips.innerHTML="server&nbsp;&nbsp;"+data+"&nbsp;&nbsp;is&nbsp;&nbsp;served&nbsp;&nbsp;for&nbsp;&nbsp;you!";
             changeLeftBlock(data);
@@ -99,26 +107,31 @@
                 }
             };
         });
+        //有客服拒绝请求
         socket.on("declined",function (data) {
             tips.innerHTML="server&nbsp;&nbsp;"+data+"&nbsp;&nbsp;said&nbsp;:&nbsp;screw&nbsp;&nbsp;you!";
             clearLeftBlock();
             btnSend.onclick="";
             document.onkeydown="";
         });
+        //没有客服
         socket.on("none",function () {
             tips.innerHTML="no&nbsp;&nbsp;services&nbsp;!&nbsp;&nbsp;try&nbsp;&nbsp;again&nbsp;&nbsp;or&nbsp;&nbsp;wait";
         });
     }
+    //动态更改左侧列表，显示服务人员信息
     function changeLeftBlock(data) {
         var container=document.querySelector("#d_leftBlock");
         container.innerHTML="server "+data;
         container.style.background="#bbb";
     }
+    //清除左侧服务人员信息
     function clearLeftBlock() {
         var container=document.querySelector("#d_leftBlock");
         container.innerHTML="";
         container.style.background="#fff";
     }
+    //连接服务器
     function connectServer() {
         socket=io(url);
     }
