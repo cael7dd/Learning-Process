@@ -16,8 +16,8 @@
     }
     function addExpression() {
         var container=document.querySelector("#d_expressionContainer");
-        for(var i=0;i<9;i++){
-            for(var j=0;j<10;j++){
+        for(var i=0;i<10;i++){
+            for(var j=0;j<9;j++){
                 var div=document.createElement("div");
                 div.className="d_express";
                 div.style.backgroundPosition=-j*28+"px "+(-28)*i+"px";

@@ -6,7 +6,7 @@
 #container{
     width: 1000px;
     height: 700px;
-    box-shadow: 1px 1px 5px 0 #444444;
+    box-shadow: 3px 3px 15px 0 #444444;
     margin: 0 auto;
     position: relative;
 }
@@ -120,6 +120,8 @@
     background: white;
     cursor: default;
     display: none;
+    box-shadow: 0 0 5px 0 #444444;
+    border-radius: 5px;
 }
 .d_express{
     width: 28px;
@@ -128,6 +130,9 @@
     background-image: url("1.png");
     background-size: 252px 280px;
     cursor: pointer;
+}
+.d_express:hover{
+    background-image: url("1.gif");
 }
 .d_lineExpress{
     width: 28px;
