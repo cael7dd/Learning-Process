@@ -14,7 +14,6 @@ class Connection {
             var server = Connection.adminMap.get(key);
             if (server.client.length <= Connection.servedAmount) {
                 this.server = server;
-                server.servedNum++;
                 server.client.push(this._id);
                 server._socket.emit("client", this._id);
                 this._socket.emit("accept", server._id);
@@ -50,7 +49,6 @@ class Connection {
         this._socket.on("admin", ()=> {
             this._socket.join("admin");
             this.group = "adminMap";
-            this.servedNum = 0;
             this._id = Connection.chooseId(this.group);
             Connection.adminMap.set(this._id, this);
             this.client = [];
@@ -101,7 +99,6 @@ class Connection {
         });
         //客户和服务之间进行通信
         this._socket.on("chat", (data)=> {
-
             if (this.group == "adminMap") {
                 let temp = /\?id:([^\&]+)&(.*)/.exec(data);
                 let clientId = parseInt(temp[1]);
