@@ -10,9 +10,6 @@ var fs=require("fs");
 var app=express();
 var Server=http.Server(app);
 var io=socketIO(Server);
-
-//app.use(express.static("static"));
-
 Server.listen(8000,()=>{
     console.log("Server start at port 8000");
 });
