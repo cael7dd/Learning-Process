@@ -43,6 +43,7 @@
     float: left;
     overflow-y:scroll;
     font-size: 18px;
+    background-image: linear-gradient(45deg,#ebeff8,#dce7f7);
 }
 #d_inputContainer{
     width: 769px;
@@ -63,6 +64,8 @@
     border: 0;
     outline: none;
     display: block;
+    font-size: 14px;
+    background-image: linear-gradient(45deg,#ebeff8,#dce7f7);
 }
 .btn_handle{
     float: right;
@@ -93,10 +96,32 @@
     letter-spacing: 1px;
 }
 .myLines{
-    color: #000066;
+    color: black;
+    margin: 4px;
+    border: 1px solid #78cdf8;
+    border-radius: 7px;
+    float: right;
+    margin-right: 20px;
+    clear: both;
+    padding: 0 6px;
+    box-shadow: 1px 1px 3px 0 #78cdf8;
+    max-width: 700px;
+    overflow: hidden;
+    word-break: break-all;
 }
 .lines{
-    color: crimson;
+    color: black;
+    margin: 4px;
+    border: 1px solid #cdd7e2;
+    border-radius: 7px;
+    float: left;
+    margin-left: 20px;
+    clear: both;
+    padding: 0 6px;
+    box-shadow: 1px 1px 3px 0 #cdd7e2;
+    max-width: 700px;
+    overflow: hidden;
+    word-break: break-all;
 }
 #d_openExpression{
     height: 28px;
