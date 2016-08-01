@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/createjs-easeljs/lib/easeljs-0.8.2.min.js"></script>
+    <script src="node_modules/createjs-tweenjs/lib/tweenjs-0.6.0.min.js"></script>
+</head>
+<style>
+    #d_container{
+        margin: 0 auto;
+    }
+    #d_btnContainer{
+        margin: 0 auto;
+    }
+    #random{
+        margin-left: 150px;
+    }
+    #d_level{
+        width: 27px;
+    }
+</style>
+<body>
+<div id="d_container">
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div id="d_btnContainer">
+        <button id="random">开始打乱</button>
+        第
+        <input id="d_level" type="number" placeholder="1">
+        关
+        <input id="ipt_file" type="file">
+    </div>
+
+</div>
+
+
+<script src="Main.min.js"></script>
+</body>
+</html>
