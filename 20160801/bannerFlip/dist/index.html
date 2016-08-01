@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #container{
+        position: relative;
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+        margin-top: 100px;
+
+    }
+    .block{
+        float: left;
+    }
+    #d_container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+
+    }
+    #d_btnContainer {
+        position: relative;
+        margin: 0 auto;
+        /*margin-top: 350px;*/
+        height: 20px;
+
+    }
+
+    .d_btn {
+        float: left;
+        margin-right: 10px;
+        background: rgba(0,0,0,0.8);
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        color: white;
+        cursor: pointer;
+    }
+    #d_left {
+        position: absolute;
+        left: 30px;
+        height: 70px;
+        width: 40px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        line-height: 70px;
+        border-radius: 5px;
+        top: 165px;
+        cursor: pointer;
+    }
+
+    #d_right {
+        position: absolute;
+        top: 165px;
+        right: 30px;
+        height: 70px;
+        width: 40px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        line-height: 70px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    @keyframes next {
+        from{
+            transform:perspective(550px) translateZ(0px) scale(1);
+            opacity: 1;
+        }
+        to{
+            transform:perspective(550px) translateZ(520px) rotateX(90deg) rotateY(20deg)  scale(0.2);
+            opacity: 0;
+        }
+    }
+    @keyframes last {
+        from{
+            transform:perspective(550px) translateZ(520px) rotateX(-90deg) rotateY(-20deg)  scale(0.2);
+            opacity: 0;
+        }
+        to{
+            transform:perspective(550px) translateZ(0px) scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+<div id="container">
+    <div id="d_container"></div>
+    <div id="d_btnContainer"></div>
+    <div id="d_left"><</div>
+    <div id="d_right">></div>
+</div>
+
+<script src="../src/Main.js"></script>
+</body>
+</html>
