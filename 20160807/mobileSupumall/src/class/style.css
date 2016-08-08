@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: "微软雅黑", "黑体", "宋体";
+    color: #656565;
+}
+html{
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    background: #F5F5F5;
+}
+#d_head{
+    width: 100%;
+    padding: 3% 0;
+    background: #fff;
+}
+#headLast{
+    background-image: url(../../img/2x.png);
+    background-repeat: no-repeat;
+    background-size: 24rem 24rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 1% 1% 0 3%;
+    float: left;
+    background-position: 0 -5.7rem;
+}
+#d_searchContainer{
+    float: left;
+    margin-left: .8rem;
+    width: 71.2%;
+    background: #F0F0F0;
+    padding: 1.5% 0;
+    overflow: hidden;
+    border-radius: 3%;
+
+}
+#searchIcon{
+    width: 1.8rem;
+    height: 1.8rem;
+    float: left;
+    margin-left:.5rem;
+    background: url("../../img/2x.png") no-repeat -16rem -4.8rem;
+    background-size: 24rem 24rem;
+}
+#search{
+    border: 0;
+    background: inherit;
+    width: 89%;
+    float: left;
+    height: 1.8rem;
+}
+#btnSearch{
+    float: right;
+    margin-right: 3%;
+    background: #E5004A;
+    border-radius: .2rem;
+    font-size: 1.4rem;
+    padding: 1.5% 1%;
+    color: #fff;
+    border: 0;
+}
+#bodyItem{
+   -webkit-box-flex: 1;
+    overflow-y: scroll;
+    margin-top: 3%;
+}
+.a_classBlock{
+    float: left;
+    width: 21%;
+    padding: 2.5%;
+    height: 5rem;
+    border: 1px solid #e5e5e5;
+    margin: .8em;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 5rem;
+    color: #fff;
+    border-radius: 50%;
+    animation: changeHue 10s linear infinite;
+    text-shadow: 0 0 1rem #000;
+}
+@keyframes changeHue {
+    from{
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to{
+        -webkit-filter: hue-rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

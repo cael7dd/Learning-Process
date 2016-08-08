@@ -1,0 +1,23 @@
+@media screen and (max-width: 330px) {
+    html {
+        font-size: 8px;
+    }
+}
+@media screen and (min-width: 330px)and (max-width: 400px ) {
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 400px)and (max-width: 440px ) {
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 440px){
+    html {
+        font-size: 18px;
+    }
+}
+input{
+    font-size: 1.4rem;
+}

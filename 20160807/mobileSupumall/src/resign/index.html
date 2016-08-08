@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>用户注册页面</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../js/Encryption.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/screen.css">
+</head>
+<body>
+<div id="result">
+    <div id="alert"></div>
+</div>
+<div id="body">
+    <div id="head">
+        <a href="#" id="headLast"></a>
+        <span id="headTitle">账户注册</span>
+    </div>
+    <div id="d_resign">
+        <div class="d_resignIpt">
+            <div class="d_iptLeftIcon" id="ipt1Icon"></div>
+            <input id="iptTel" type="number" placeholder="请输入手机号" required="required">
+        </div>
+        <div class="d_resignIpt" id="ipt2">
+            <div id="ipt2Container">
+                <div class="d_iptLeftIcon" id="ipt2Icon"></div>
+                <input id="iptCheck" type="number" placeholder="请输入验证码" required="required">
+            </div>
+            <button id="getCheck">获取验证码</button>
+
+        </div>
+        <div class="d_resignIpt">
+            <div class="d_iptLeftIcon" id="ipt3Icon"></div>
+            <input id="iptPassword" type="password" placeholder="请输入密码6-16个字符" required="required">
+            <button id="see" class="d_iptLeftIcon"></button>
+        </div>
+        <div id="hasRead">
+            <label for="read" id="label">
+            <input type="checkbox" id="read" checked="checked">
+                &nbsp;我已阅读并同意&nbsp;
+                <a id="paper" href="#">《速普商城用户协议》</a>
+            </label>
+        </div>
+        <button id="resignBtn">注册</button>
+    </div>
+</div>
+<script src="ResignMain.js"></script>
+</body>
+</html>

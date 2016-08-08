@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑", "黑体", "宋体";
+    color: #656565;
+}
+html{
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #F5F5F5;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+#d_body{
+    height: 100%;
+    overflow-y:scroll;
+    -webkit-box-flex: 1;
+}
+#d_head{
+
+    width: 100%;
+    padding: 3% 0;
+    background: #fff;
+    color: #333333;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    text-indent: -3rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+#headLast{
+    background-image: url(../../img/2x.png);
+    background-repeat: no-repeat;
+    background-size: 24rem 24rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 1% 1% 0 3%;
+    float: left;
+    background-position: 0 -5.7rem;
+}
+#banner{
+    width: 100%;
+    height: 32rem;
+}
+#detailTitle{
+    font-size: 1.6rem;
+    color: #656565;
+    padding: 2%;
+    background: white;
+    margin-top: 2%;
+}
+#priceContainer{
+    padding: 2%;
+    overflow: hidden;
+    background: white;
+}
+#currentPrice{
+    color: #e5004b;
+    font-size: 1.8rem;
+    float: left;
+}
+#discount{
+    color:#007aff;
+    font-size: 1.5rem;
+    float: left;
+    margin-left: 3rem;
+    line-height: 2rem;
+}
+#buyerAmount{
+    float: right;
+    font-size: 1.5rem;
+}
+#d_details{
+    margin-top: 2%;
+    padding: 2%;
+    background: #fff;
+}
+#detailsContainer{
+    padding: 3% 0;
+}
+#d_detailHead{
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    color: #007aff;
+    border-bottom:1px solid #F5F5F5;
+}
+#detailsContainer{
+    font-size: 1.2rem;
+    overflow: hidden;
+    color: #444444;
+}
+.detailsBlock{
+    width: 49%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    float: left;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+#d_amount{
+    padding: 3%;
+    background: #fff;
+    margin-top: 3%;
+    overflow: hidden;
+}
+#s_buyAmount{
+    float: left;
+    font-size: 1.4rem;
+    line-height: 3.5rem;
+
+}
+#d_amountBtnContainer{
+    float: right;
+    width: 60%;
+    overflow: hidden;
+}
+.btn_change{
+    width: 3.8rem;
+    float: right;
+    height: 3.8rem;
+    background: url("../../img/3x.png") no-repeat;
+    background-size: 8.5rem 8.4rem;
+    border: 0;
+}
+#btnPlus{
+    background-position: 0 0;
+}
+#btnMinus{
+    background-position: 0 -4.7rem;
+    -webkit-filter: brightness(.7);
+}
+#ipt_showAmount{
+    float: right;
+    background: #F5F5F5;
+    color: #656565;
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 47%;
+    margin: 0 1%;
+    height: 3.8rem;
+    line-height: 3.6rem;
+}
+#d_detailImgContainer{
+    padding: 3%;
+    margin-top: 3%;
+    background: #fff;
+}
+#imgHead{
+    font-size: 1.8rem;
+    color: #656565;
+    padding-left: 5%;
+}
+
+
+
+
+
+
+
+#d_bottom{
+    padding: 1% 0 0 5%;
+    overflow: hidden;
+    background: #fff;
+}
+#a_checkCar{
+    position: relative;
+    float: left;
+    background: url("../../img/btn2.png") no-repeat;
+    background-size: 22.2rem 22.2rem;
+    width: 3.5rem;
+    height: 2.7rem;
+    transform-origin: 50% 50%;
+
+}
+#d_carGoodsNum{
+    position: absolute;
+    background: #e5004b;
+    color: white;
+    border-radius: 50%;
+    right: -.1rem;
+    top: 0;
+    padding: .1rem;
+    display: none;
+}
+#btn_addToCar{
+    background: #e5004b;
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 2% 0;
+    width: 65%;
+    font-size: 1.8rem;
+    border: 0;
+
+}
+@keyframes addCar {
+    0%,50%,100%{
+        transform: translate(0,0) rotateZ(0deg);
+        -webkit-filter: hue-rotate(0deg);
+    }
+    25%{
+        transform: translate(0,-.5rem) rotateZ(15deg);
+        -webkit-filter: hue-rotate(90deg);
+    }
+    75%{
+        transform: translate(0,-.5rem) rotateZ(-15deg);
+        -webkit-filter: hue-rotate(-90deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

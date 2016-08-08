@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑", "黑体", "宋体";
+    color: #656565;
+}
+html{
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #F5F5F5;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+#d_head{
+    padding: 3% 0;
+    background-color: #ffffff;
+    border-bottom: .1rem solid #e5e5e5;
+    text-align: center;
+    color: #333333;
+    font-size: 1.8rem;
+    vertical-align: middle;
+    font-weight: 600;
+}
+#container{
+    -webkit-box-flex: 1;
+}
+#d_personalTop{
+    padding: 2rem 0;
+    padding-left: 15%;
+    background: #E5004B;
+    overflow: hidden;
+
+}
+#a_personalSculpture{
+    width: 6.2rem;
+    height: 6.2rem;
+    float: left;
+    border-radius: 50%;
+}
+#d_personalTopText{
+    float: left;
+    text-align: left;
+    color: #FFF;
+    font-size: 1.2rem;
+    margin-left: 5%;
+    margin-top: 1rem;
+}
+#s_userID{
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+#s_userSex{
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    font-size: 1.2em;
+    margin-top: .5rem;
+}
+#d_personalInfo{
+    background: #fff;
+}
+.d_infoList{
+    display: block;
+    padding: 3% 0;
+    margin:  0 auto;
+    width: 94%;
+
+    font-size: 1.4rem;
+    overflow: hidden;
+}
+.d_info{
+    background: url("../../img/5x.png") no-repeat;
+    background-size: 42rem 42rem;
+    float: left;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.d_infoText{
+    float: left;
+    margin-left: 1rem;
+    color: #333;
+}
+.d_infoRightArrow{
+    float: right;
+    font-size: 2rem;
+    color: #313131;
+}
+#d_info1{
+    background-position: -2.2rem -16.1rem;
+}
+#d_info2{
+    background-position: -7.3rem -20.9rem;
+}
+#d_info3{
+    background-position: -2.3rem -23.2rem;
+}
+#d_info4{
+    background-position: -7.2rem -18.3rem;
+}
+#d_info5{
+    background-position: -2.4rem -25.6rem;
+}
+#d_info6{
+    background-position: -2.2rem -21.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#d_bottomLinkIcon2{
+    background-position: -13.8rem -4rem;
+}
+#d_bottomLinkIcon4{
+    background-position: -18.2rem -12rem;
+}

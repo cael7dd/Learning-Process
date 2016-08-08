@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+html{
+    font-size:62.5%;
+    overflow-y: scroll;
+}
+a{
+    text-decoration: none;
+}
+#body{
+    background: #fff;
+}#head{
+     padding: 3% 0;
+     border-bottom: 1px solid #e5e5e5;
+ }
+#headLast{
+    background-image: url(../../img/2x.png);
+    background-repeat: no-repeat;
+    background-size: 240px 240px;
+    width: 18px;
+    height: 18px;
+    margin: 1% 1% 0 3%;
+    float: left;
+    background-position: 0 -57px;
+}
+#headTitle{
+    text-align: left;
+    color: #333333;
+    font-weight: 600;
+    font-size: 1.8rem;
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+}
+#d_resign{
+    width: 82%;
+    margin: 0 auto;
+    padding: 1% 0;
+    font-size: 1.4rem;
+}
+.d_resignIpt{
+    width: 100%;
+    height: 40px;
+    padding: 2% 0;
+    margin: 2% 0 5% 0;
+    background: #f2f2f2;
+}
+.d_iptLeftIcon{
+    margin: 14px 2% 0 4%;
+    width: 6%;
+    background-image: url("../../img/2x.png");
+    background-size: 24rem 24rem;
+    float: left;
+    height: 1.8rem;
+}
+#ipt1Icon{
+    background-position: -6rem -7.5rem;
+}
+#iptTel{
+     height: 100%;
+     background: inherit;
+     float: left;
+     line-height: 100%;
+     width: 88%;
+     border: 0;
+ }
+#ipt3Icon{
+    background-position: -16rem 0;
+}
+#iptPassword{
+    width: 70%;
+    border: 0;
+    background: inherit;
+    height: 100%;
+}
+#see{
+    float: right;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #f2f2f2;
+    background-position: -16rem -3rem;
+    margin-right: 6%;
+    border: 0;
+}
+#resignBtn{
+    margin: 4% 0;
+    width: 100%;
+    padding: 3%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    background: #e80046;
+    border: 0;
+}
+#result{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    display: none;
+}
+#alert{
+    width: 40%;
+    background: #f2f2f2;
+    border-radius: .5rem;
+    text-align: center;
+    padding:5% 0;
+    margin: 0 auto;
+    margin-top:40%;
+    font-size: 1.8rem;
+    display: none;
+}
+#loading{
+    width: 20%;
+    padding:3% 2%;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top:80%;
+    background: rgba(0,0,0,0.8);
+}
+.loadingBall{
+    animation:zoomIn .5s infinite linear alternate;
+    background: #fff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: .3rem;
+    float: left;
+    transform: scale(0);
+}
+#loadingBall1{
+    animation-delay: .2s;
+}
+#loadingBall2{
+    animation-delay: .4s;
+}
+#loadingBall3{
+    animation-delay: .6s;
+}
+@keyframes zoomIn {
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform:scale(1);
+    }
+}
+#underPassword{
+    font-size: 1.4rem;
+}
+#a_forget{
+    float: left;
+    color: #68A4CE;
+
+}
+#remember{
+    width: 1.8rem;
+    height: 1.8rem;
+    float: left;
+    margin-top: .2rem;
+}
+#rememberContainer{
+    float: right;
+    color:#656565;
+    width: 28%;
+}
+#other_logIn{
+    margin-top: 4%;
+}
+#otherLogInTitle{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999999;
+}
+.a_otherImg{
+    width: 4.9rem;
+    height: 4.8rem;
+    display: inline-block;
+}
+#other1{
+    background: url("../../img/5x.png") no-repeat -7.6rem -14rem;
+    background-size: 48rem 48rem;
+}
+#other2{
+    background: url("../../img/5x.png") no-repeat -7.6rem 0;
+    background-size: 48rem 48rem;
+}
+#a_otherContainer{
+    width: 10.3rem;
+    height: 4.8rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+#resignNow{
+    margin-top: 10rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #656565;
+}
+#a_resignNow{
+    color: #e5004b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="../../node_modules/swiper/dist/css/swiper.css">
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../js/Encryption.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/screen.css">
+</head>
+<body>
+<div id="d_body">
+    <div id="d_head">
+        <a href="#" id="headLast"></a>
+        商品详情
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="banner">
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="detailTitle"></div>
+    <div id="priceContainer">
+        <span id="currentPrice"></span>
+        <span id="discount"></span>
+        <span id="buyerAmount"></span>
+    </div>
+    <div id="d_details">
+        <div id="d_detailHead">具体参数</div>
+        <div id="detailsContainer">
+        </div>
+    </div>
+    <div id="d_amount">
+        <span id="s_buyAmount">数量</span>
+        <div id="d_amountBtnContainer">
+            <button class="btn_change" id="btnPlus"></button>
+            <input id="ipt_showAmount" type="number" value="1">
+            <button class="btn_change" id="btnMinus"></button>
+        </div>
+    </div>
+    <div id="d_detailImgContainer">
+        <div id="imgHead">图文详情</div>
+        <div id="detailImg"></div>
+    </div>
+</div>
+<div id="d_bottom">
+    <a href="../shoppingcar/index.html" id="a_checkCar"><div id="d_carGoodsNum">+1</div></a>
+    <button id="btn_addToCar">加入购物车</button>
+</div>
+<script src="../../node_modules/swiper/dist/js/swiper.js"></script>
+<script src="GoodsDetailsMain.js"></script>
+</body>
+</html>

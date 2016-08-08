@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="../../node_modules/swiper/dist/css/swiper.css">
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../js/Encryption.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/screen.css">
+</head>
+<body>
+<div id="d_body">
+    <div id="topSearch">
+        <a href="#" id="a_searchAlert"></a>
+        <a href="../class/index.html" id="d_searchContainer">
+            <div id="d_searchLeftIcon"></div>
+            <span id="s_searchText">搜索商品名称或品牌</span>
+        </a>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="banner">
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="promotion">
+        <a href="#" class="a_promotion">
+            <img src="../../img/home_icon_1.png" class="img_promotion" width="100%">
+            整点抢购
+        </a>
+        <a href="#" class="a_promotion">
+            <img src="../../img/home_icon_2.png" class="img_promotion" width="100%">
+            白菜专区
+        </a>
+        <a href="#" class="a_promotion">
+            <img src="../../img/home_icon_3.png" class="img_promotion" width="100%">
+            全球购
+        </a>
+        <a href="#" class="a_promotion">
+            <img src="../../img/home_icon_4.png" class="img_promotion" width="100%">
+            限时特卖
+        </a>
+    </div>
+    <div id="d_hot">
+        <div class="blockHead">热卖单品</div>
+        <div id="blockList">
+            <div id="blockContainer"></div>
+        </div>
+    </div>
+    <div id="goodsList">
+        <div class="blockHead">商品推荐</div>
+        <div id="goodListBlockContainer"></div>
+        <div id="d_goodsBlockBottom">
+            <span id="text">查看更多</span>
+            <div id="loading">
+                <div class="loadingBall" id="loadingBall1"></div>
+                <div class="loadingBall" id="loadingBall2"></div>
+                <div class="loadingBall" id="loadingBall3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="d_bottom">
+    <a href="#" class="a_bottomLink">
+        <div class="d_bottomLinkIcon" id="d_bottomLinkIcon1"></div>
+        <span id="s_bottomLinkActive">首页</span>
+    </a>
+    <a href="../class/index.html" class="a_bottomLink">
+        <div class="d_bottomLinkIcon" id="d_bottomLinkIcon2"></div>
+        <span class="s_bottomLinkText">分类</span>
+    </a>
+    <a href="../shoppingcar/index.html" class="a_bottomLink">
+        <div class="d_bottomLinkIcon" id="d_bottomLinkIcon3"></div>
+        <span class="s_bottomLinkText">购物车</span>
+    </a>
+    <a href="../personal/index.html" class="a_bottomLink">
+        <div class="d_bottomLinkIcon" id="d_bottomLinkIcon4"></div>
+        <span class="s_bottomLinkText">个人中心</span>
+    </a>
+</div>
+
+<script src="../../node_modules/swiper/dist/js/swiper.js"></script>
+<script src="HomePageMain.js"></script>
+</body>
+</html>

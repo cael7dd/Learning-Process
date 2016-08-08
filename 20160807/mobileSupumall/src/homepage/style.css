@@ -1,0 +1,342 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑", "黑体", "宋体";
+    color: #656565;
+}
+html{
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #F5F5F5;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+#d_body{
+    height: 100%;
+    -webkit-box-flex: 1;
+    overflow-y: scroll;
+
+}
+#topSearch{
+    padding: 3%;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    background: #fff;
+}
+#a_searchAlert{
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    background: url("../../img/5x.png") no-repeat 1rem -33.8rem;
+    background-size: 48rem 48rem;
+    margin: .5rem 3% 0 0;
+}
+#d_searchContainer{
+    width: 85%;
+    height: 3rem;
+    background: #EDEDED;
+    line-height: 3rem;
+    text-align: left;
+    font-weight: 600;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    padding: .3rem 0;
+    color: #555555;
+    float: left;
+}
+#d_searchLeftIcon{
+    float: left;
+    background: url("../../img/5x.png") no-repeat -1.9rem -33.8rem;
+    background-size: 48rem 48rem;
+    width: 3.5rem;
+    height: 3rem;
+}
+#banner{
+    width: 100%;
+    height: 20rem;
+}
+#promotion{
+    border-bottom: 1px solid #DBDBDB;
+    overflow: hidden;
+    background: #fff;
+}
+.a_promotion{
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    width: 15%;
+    margin: 5% ;
+}
+.img_promotion{
+    display: block;
+}
+#d_hot{
+    border-bottom: 1px solid #DBDBDB;
+    border-top: 1px solid #DBDBDB;
+    width: 100%;
+    background: #ffffff;
+    margin-top: 1rem;
+
+}
+.blockHead{
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.4rem;
+    padding-left: 2rem;
+    color: #EC447B;
+    font-weight: 600;
+    border-bottom: 1px solid #DBDBDB;
+}
+#blockList{
+    overflow-x: scroll;
+    width: 100%;
+}
+.a_listBLock{
+    float: left;
+    width: 11rem;
+    height: 13.2rem;
+    margin: .3rem;
+    text-align: center;
+}
+.img_listBlock{
+    display: block;
+    width: 9rem;
+    height: 9rem;
+    margin: 0 auto;
+}
+.s_listBlockPrice{
+    color: #e5004a;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: block;
+}
+.s_listBlockOrigin{
+    color: #bebebe;
+    font-size: 1.2rem;
+    display: block;
+}
+#blockContainer{
+    overflow: hidden;
+    height: 14rem;
+}
+#goodsList{
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 1rem;
+    border-bottom: 1px solid #DBDBDB;
+    border-top: 1px solid #DBDBDB;
+}
+.goodListBlock{
+    float: left;
+    padding: 4%;
+    width: 42%;
+    text-align: center;
+    height: 19rem;
+}
+.img_goodsBlock{
+    display: block;
+    width: 100%;
+    height: 15rem;
+}
+.headGoodsBlock{
+    font-size: 1.5rem;
+    text-align: left;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #222;
+    height: 3rem;
+    line-height: 2rem;
+}
+.d_goodsText{
+    overflow: hidden;
+}
+.s_goodsBlockPrice{
+    float: left;
+    font-size: 1.4rem;
+    color: #e5004b;
+}
+.s_goodsBlockAmount{
+    float: right;
+    font-size: 1.2rem;
+    color: #656565;
+    text-decoration: line-through;
+}
+#goodListBlockContainer{
+    overflow: hidden;
+}
+#d_goodsBlockBottom{
+    height: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    border-top: 1px solid #DBDBDB;;
+    line-height: 3rem;
+    color: #656565;
+    position: relative;
+}
+
+
+#loading{
+    width: 18%;
+    padding:1% 2%;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: absolute;
+    top:10%;
+    left: 39%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.loadingBall{
+    animation:zoomIn .5s infinite linear alternate;
+    background: #fff;
+    width: 1.2rem;
+    height:  1.2rem;
+    border-radius: 50%;
+    margin: .3rem;
+    float: left;
+    transform: scale(0);
+}
+#loadingBall1{
+    animation-delay: .2s;
+}
+#loadingBall2{
+    animation-delay: .4s;
+}
+#loadingBall3{
+    animation-delay: .6s;
+}
+@keyframes zoomIn {
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform:scale(1);
+    }
+}
+
+
+
+
+#d_bottomLinkIcon1{
+    background-position: -18.2rem 0;
+}
+#d_bottomLinkIcon2{
+    background-position: -13.8rem -4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

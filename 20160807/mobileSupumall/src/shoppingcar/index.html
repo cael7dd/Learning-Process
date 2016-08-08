@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../js/Encryption.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/screen.css">
+</head>
+<body>
+<div id="d_body">
+    <div id="d_head">
+        <a href="#" id="headLast"></a>
+        购物车
+    </div>
+    <div id="d_goodListContainer">
+        <div id="d_goodsEdit"><span id="s_edit">编辑</span></div>
+    </div>
+</div>
+<div id="d_totalContainer">
+    <input type="checkbox" checked="checked" id="ipt_chooseAll">
+    <span id="s_chooseAllText">全选</span>
+    <button id="btn_pay">结算</button>
+    <span id="s_totalAmount">总计：<b id="b_totalAmount">￥0</b></span>
+</div>
+<div id="d_bottom">
+    <a href="../homepage/index.html" class="a_bottomLink">
+        <div class="d_bottomLinkIcon" id="d_bottomLinkIcon1"></div>
+        <span class="s_bottomLinkText">首页</span>
+    </a>
+    <a href="../class/index.html" class="a_bottomLink">
+        <div class="d_bottomLinkIcon" id="d_bottomLinkIcon2"></div>
+        <span class="s_bottomLinkText">分类</span>
+    </a>
+    <a href="#" class="a_bottomLink">
+        <div class="d_bottomLinkIcon" id="d_bottomLinkIcon3"></div>
+        <span id="s_bottomLinkActive">购物车</span>
+    </a>
+    <a href="../personal/index.html" class="a_bottomLink">
+        <div class="d_bottomLinkIcon" id="d_bottomLinkIcon4"></div>
+        <span class="s_bottomLinkText">个人中心</span>
+    </a>
+</div>
+<script src="ShoppingCarMain.js"></script>
+</body>
+</html>

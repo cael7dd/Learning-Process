@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../js/Encryption.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/screen.css">
+</head>
+<body>
+<div id="result">
+    <div id="alert"></div>
+    <div id="loading">
+        <div class="loadingBall" id="loadingBall1"></div>
+        <div class="loadingBall" id="loadingBall2"></div>
+        <div class="loadingBall" id="loadingBall3"></div>
+    </div>
+</div>
+<div id="body">
+    <div id="head">
+        <a href="../homepage/index.html" id="headLast"></a>
+        <span id="headTitle">登录</span>
+    </div>
+    <div id="d_resign">
+        <div class="d_resignIpt">
+            <div class="d_iptLeftIcon" id="ipt1Icon"></div>
+            <input id="iptTel" type="number" placeholder="请输入用户名/邮箱/手机号" required="required">
+        </div>
+        <div class="d_resignIpt">
+            <div class="d_iptLeftIcon" id="ipt3Icon"></div>
+            <input id="iptPassword" type="password" placeholder="请输入密码" required="required">
+            <button id="see" class="d_iptLeftIcon"></button>
+        </div>
+        <div id="underPassword">
+            <a href="#" id="a_forget">忘记密码</a>
+            <label for="remember" id="rememberContainer">
+                <input type="checkbox" id="remember">
+                记住密码
+            </label>
+        </div>
+        <button id="resignBtn">登录</button>
+        <div id="other_logIn">
+            <div id="otherLogInTitle">第三方登录</div>
+            <div id="a_otherContainer">
+                <a href="#" class="a_otherImg" id="other1"></a>
+                <a href="#" class="a_otherImg" id="other2"></a>
+            </div>
+        </div>
+        <div id="resignNow">还没有帐号？<a href="../resign/index.html" id="a_resignNow">立即注册</a></div>
+    </div>
+</div>
+<script src="LogInMain.js"></script>
+</body>
+</html>

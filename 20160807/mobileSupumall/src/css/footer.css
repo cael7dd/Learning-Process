@@ -1,0 +1,41 @@
+#d_bottom{
+
+    width: 100%;
+    padding: .5rem 0;
+    border-top: .1rem solid #e5e5e5;
+    z-index: 5;
+    background: #fff;
+}
+.a_bottomLink{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.d_bottomLinkIcon{
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 0 auto;
+    background-image: url("../../img/5x.png");
+    background-size: 48rem 48rem;
+    margin-bottom: .2rem;
+}
+#d_bottomLinkIcon1{
+    background-position: -14.2rem 0;
+}
+#d_bottomLinkIcon2{
+    background-position: -17.9rem -4rem;
+}
+#d_bottomLinkIcon3{
+    background-position: -14.2rem -8rem;
+}
+#d_bottomLinkIcon4{
+    background-position: -14.2rem -12rem;
+}
+.s_bottomLinkText{
+    color: #B8B8B8;
+    font-size: 1.4rem;
+}
+#s_bottomLinkActive{
+    color: #E5004B;
+    font-size: 1.4rem;
+}
