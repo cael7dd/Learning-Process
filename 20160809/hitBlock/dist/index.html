@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Title</title>
+    <script src="../node_modules/createjs-easeljs/lib/easeljs-0.8.2.min.js"></script>
+    <script src="../node_modules/createjs-tweenjs/lib/tweenjs-0.6.0.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #000000;
+        overflow: hidden;
+    }
+</style>
+<body>
+<canvas width="100%" height="100%" id="canvas"></canvas>
+<script>
+    document.body.style.height=window.innerHeight+"px";
+    document.querySelector("#canvas").height=window.innerHeight;
+    document.querySelector("#canvas").width=window.innerWidth;
+</script>
+<script src="Main.min.js"></script>
+</body>
+</html>
