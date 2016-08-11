@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#container{
+  margin-top: 150px;
+}
+.modify, .delete {
+  cursor: pointer;
+}
+.modify{
+  color: #3399ff;
+}
+.delete{
+  color: #f30;
+}
+#table{
+  margin: 0 auto;
+}
+#ipt_container{
+  margin: 0 auto;
+  width: 496px;
+  margin-top: 20px;
+}
+td{
+  text-align: center;
+  width: 100px;
+}
