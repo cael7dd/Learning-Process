@@ -161,6 +161,8 @@ class Weather {
             $scope.isEdit=0;
             $scope.height = window.innerHeight;
             $scope.urlCity = "石景山";
+            var crtTime=new Date().getHours();
+            $scope.isDay=(crtTime>= 7 && crtTime <= 19);
             $http({
                 url: "http://apis.baidu.com/apistore/weatherservice/citylist?cityname=" + $scope.urlCity,
                 method: "get",
@@ -226,6 +228,7 @@ class Weather {
         context.lineWidth=2;
         context.beginPath();
         context.moveTo(30,step*(max-hIndex[0])+20);
+        context.arc(30,step*(max-hIndex[0])+20,2,0,Math.PI*2);
         context.fillText(hIndex[0]+"℃",15,step*(max-hIndex[0])+14);
         for(i=1;i<data.length;i++){
             context.fillText(hIndex[i]+"℃",60*i+15,step*(max-hIndex[i])+14);
@@ -237,6 +240,7 @@ class Weather {
         context.beginPath();
         context.strokeStyle="#98F5FF";
         context.moveTo(30,step*(max-lIndex[0])+20);
+        context.arc(30,step*(max-lIndex[0])+20,2,0,Math.PI*2);
         context.fillText(lIndex[0]+"℃",15,step*(max-lIndex[0])+40);
         for(i=1;i<data.length;i++){
             context.fillText(lIndex[i]+"℃",60*i+15,step*(max-lIndex[i])+40);

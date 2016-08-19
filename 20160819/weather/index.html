@@ -21,8 +21,8 @@
     </div>
     <div style="transition:.5s" ng-style="{'-webkit-filter':'blur('+isEdit+'px)'}">
         <div id="top" ng-style="{'height':height/2+'px','background':bg+' 0 100% no-repeat','background-size':'cover'}">
-            <div id="d_temp" ng-bind="temp"></div>
-            <div id="d_location" ng-bind="location+' | '+todayType"></div>
+            <div id="d_temp" ng-bind="temp" ng-style="{'color':(isDay)?'black':'white'}"></div>
+            <div id="d_location" ng-bind="location+' | '+todayType" ng-style="{'color':(isDay)?'black':'white'}"></div>
             <div id="d_topBottom">
                 <top-block ng-repeat="obj in topBlock" ng-style="{'border-right':(obj.top=='最低气温')?'0':'1'+'px solid white'}"></top-block>
             </div>
