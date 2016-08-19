@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<style>
+    #d_pointContainer{
+        overflow: hidden;
+        margin-top: 15px;
+
+    }
+    .d_point{
+        float: left;
+        margin-right: 2px;
+        width: 50px;
+        height: 5px;
+        background: #bbb;
+        transition: background .5s;
+    }
+    .d_gray{
+        background: #bbb;
+    }
+    .d_green{
+        background: green;
+    }
+</style>
+<body>
+<div ng-app="app" ng-controller="passwordController" ng-init="color='#f00'">
+    <label>请输入密码<input type="password" required="required" ng-model="password"></label>
+    <span style="color: #f00;" ng-bind="passResult()" ng-hide="errText"></span>
+    <span style="color: green" ng-bind="(access==1)?'密码强度一般!':((access==2)?'密码强度良好!':((access==3)?'密码强度极好!':''))" ng-hide="rightText"></span>
+    <div id="d_pointContainer" ng-hide="rightText">
+        <div class="d_point {{(access>0)?'d_green':'d_gray'}}"></div>
+        <div class="d_point {{(access>1)?'d_green':'d_gray'}}"></div>
+        <div class="d_point {{(access>2)?'d_green':'d_gray'}}"></div>
+    </div>
+</div>
+
+
+<script src="Main.js"></script>
+</body>
+</html>

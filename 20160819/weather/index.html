@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Title</title>
+    <script src="node_modules/angular/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div ng-app="app" id="d1" ng-controller="controller">
+    <div id="d_edit" ng-click="(isEdit==0)?isEdit=5:isEdit=0" ng-style="{'opacity':(isEdit==0)?'.5':'1'}"></div>
+    <div id="d_changeLocation" ng-hide="(isEdit==0)">
+        <div ng-controller="cityController">
+            <input placeholder=" 请输入地址" required="required" id="ipt" ng-model="ipt">
+            <div id="d_selectContainer">
+                <div class="d_cityItem" ng-if="ipt" ng-repeat="obj in list" ng-bind="obj.province_cn+'-'+obj.district_cn+'-'+obj.name_cn" ng-click="itemClick(obj)"></div>
+            </div>
+        </div>
+
+    </div>
+    <div style="transition:.5s" ng-style="{'-webkit-filter':'blur('+isEdit+'px)'}">
+        <div id="top" ng-style="{'height':height/2+'px','background':bg+' 0 100% no-repeat','background-size':'cover'}">
+            <div id="d_temp" ng-bind="temp"></div>
+            <div id="d_location" ng-bind="location+' | '+todayType"></div>
+            <div id="d_topBottom">
+                <top-block ng-repeat="obj in topBlock" ng-style="{'border-right':(obj.top=='最低气温')?'0':'1'+'px solid white'}"></top-block>
+            </div>
+        </div>
+        <div id="d_forecast">
+            <forecast-block ng-repeat="obj in forecastData"></forecast-block>
+        </div>
+        <div id="d_historyContainer" >
+            <div class="d_historyTop" ng-style="{'width':5*allData.length+'rem'}">
+                <history-top ng-repeat="obj in allData"></history-top>
+            </div>
+            <canvas id="canvas" width="720" height="100"></canvas>
+            <div class="d_historyTop" ng-style="{'width':5*allData.length+'rem'}">
+                <history-bottom ng-repeat="obj in allData"></history-bottom>
+            </div>
+        </div>
+        <div id="d_indexContainer">
+            <div id="d_indexHead">生活指数</div>
+            <today-index ng-repeat="obj in forecastIndex"></today-index>
+        </div>
+    </div>
+
+</div>
+<script src="Main.js"></script>
+</body>
+</html>

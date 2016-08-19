@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei UI";
+
+}
+
+body {
+    background: #bbb;
+}
+
+html {
+    font-size: 10px;
+}
+
+#top {
+    width: 100%;
+    overflow: hidden;
+}
+
+#d_temp {
+    font-size: 4rem;
+    margin: 10% 0 1% 5%;
+
+}
+
+#d_location {
+    margin-left: 5%;
+    font-size: 2.2rem;
+}
+
+#d_topBottom {
+    width: 100%;
+    height: 13%;
+    margin-top: 39%;
+}
+
+.d_topBlock {
+    width: 33%;
+    float: left;
+    height: 100%;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#d_forecast {
+    background-image: linear-gradient(to right, white,rgba(255,255,255,.8));
+    margin-bottom: .3rem;
+}
+
+.d_forecastBlock {
+    padding: 5%;
+    overflow: hidden;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.d_forecastLeftIcon {
+    float: left;
+    height: 4rem;
+    width: 4rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+}
+
+.d_forecastLeftDetail {
+    float: left;
+    margin-left: 6%;
+    height: 100%;
+
+}
+
+.d_forecastDetailTop {
+    font-size: 1.8rem;
+    margin-bottom: 1%;
+    margin-top: 7%;
+}
+
+.d_forecastDetailBottom {
+    margin-top: 1%;
+    font-size: 1.4rem;
+    color: #555555;
+}
+
+.d_detailRight {
+    float: right;
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+#d_edit {
+    position: absolute;
+    top:5rem;
+    right: 5rem;
+    background: url("weather/1.jpg") no-repeat 50% 50%;
+    background-size: 100% 100%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    opacity: .5;
+    z-index: 2;
+    border: 1px solid #fff;
+
+}
+#d_changeLocation{
+    position: absolute;
+    z-index: 5;
+    width: 50%;
+    left: 25%;
+    top:25%;
+    height: 10rem;
+}
+#ipt{
+    border: 0;
+    width: 100%;
+    height: 2rem;
+    border-radius: .5rem .5rem 0 0;
+}
+#d_selectContainer{
+    background: white;
+    width: 100%;
+    max-height: 30rem;
+    overflow-y: scroll;
+}
+.d_cityItem{
+    width: 100%;
+    font-size: 1.5rem;
+    margin: .2rem;
+}
+#d_indexContainer{
+    overflow: hidden;
+    background-image: linear-gradient(to right, white,rgba(255,255,255,.8));
+}
+#d_indexHead{
+    font-size: 1.6rem;
+    padding: .5rem;
+}
+.indexBlock{
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1%;
+    width: 31%;
+    height: 10.5rem;
+    float: left;
+    overflow: hidden;
+    text-overflow-ellipsis: ellipsis;
+}
+#d_historyContainer{
+    padding: .5rem;
+    overflow-x: scroll;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,.8) 0%,white 40%,white 90%,rgba(255,255,255,.8) 100%);
+    margin-bottom: .3rem;
+}
+.d_historyTop{
+    overflow: hidden;
+}
+.topSingleBlock{
+    font-size: 1.4rem;
+    margin: .3rem auto;
+}
+.d_historyBlock{
+    width: 5rem;
+    height: 4rem;
+    float: left;
+}
