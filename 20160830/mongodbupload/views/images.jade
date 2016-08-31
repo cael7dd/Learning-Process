@@ -1,0 +1,21 @@
+//
+   Created by 87676 on 8/30/2016.
+extends layout
+head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+block content
+    table#d_container(border="1",cellspacing="0")
+        th="文件名"
+        th="文件路径"
+        th="文件大小"
+        each item in arr
+            tr
+                td
+                    a(href="images/path?path=" + item.imagePath + "#",target="_blank")=item.imageName
+                td=item.imagePath
+                td=item.imageSize
+    form(action="images",method="post",enctype="multipart/form-data")
+        input(required="required",type="file",name="img")
+        input(type="submit")
+

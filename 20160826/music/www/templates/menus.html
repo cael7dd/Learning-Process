@@ -1,0 +1,43 @@
+<ion-view>
+  <ion-side-menus>
+    <ion-side-menu side="left">
+      <header class="bar bar-header bar-calm">
+        <h1 class="title">音乐</h1>
+      </header>
+      <ion-content class="has-header">
+        <ion-list>
+          <ion-item menu-close ui-sref=".songList" ng-click="clickLocal()">
+            <h2>播放列表</h2>
+          </ion-item>
+          <ion-item menu-close ui-sref="menus.searchSong"  ng-click="clickSearch()">
+            <h2>在线搜索</h2>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+    <ion-side-menu-content>
+      <ion-nav-view name="menus-content"></ion-nav-view>
+      <ion-footer-bar  style="height: 10%;" ng-if="!isHidden">
+        <ion-content scroll="false" style="height:100%">
+          <ion-list>
+            <ion-item class="item-thumbnail-left stable-bg" style="min-height: 72px;">
+              <img src="{{singer.image}}" style="max-width: 55px;max-height: 55px;top:7px" ui-sref="menus.songDetail()" ng-click="clickToDetail()">
+              <div style="float: right;width: 44%;height: 100%;margin-top: 16px">
+                <i class="icon {{(!audio.paused)?'ion-ios-pause':'ion-ios-play'}}" ng-click="clickPauseBtn()" style="font-size: 3rem"></i>
+                <i class="icon ion-ios-skipforward" style="font-size: 3rem;margin-left: 2rem" ng-click="clickNextSong()"></i>
+                <i class="icon {{(audio.muted)?'ion-android-volume-off':'ion-android-volume-up'}}" ng-click="(audio.muted)?audio.muted=false:audio.muted=true" style="font-size: 3rem;margin-left: 2rem"></i>
+              </div>
+              <div ui-sref="menus.songDetail()"  ng-click="clickToDetail()">
+                <h2 ng-bind="song.songName" style="margin-left: -20px;margin-top: 10px;font-size: 18px;width: 56%;overflow: hidden;white-space: nowrap;text-overflow-ellipsis: ellipsis"></h2>
+                <h3 ng-bind="singer.singername" style="margin-left: -20px;color: #555555;width: 56%"></h3>
+              </div>
+              <div style="position: absolute;left: 0;top:0;height: 2px;background: #387ef5" id="menuProcess" ng-style="{'width':playedLength+'px'}"></div>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-footer-bar>
+      <audio id="audio"></audio>
+    </ion-side-menu-content>
+  </ion-side-menus>
+
+</ion-view>

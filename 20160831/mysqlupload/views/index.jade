@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    form(action="upload",method="post",enctype="multipart/form-data")
+        span file:
+        input(type="file",required="required",name="img")
+        span description:
+        input(type="text",required="required",name="description")
+        input(type="submit")
+    table(cellspacing="0",border=1)
+        th image
+        th file name
+        th file description
+        each item in rows
+            tr
+                td
+                    img(src=item.imagePath,height="40px",style="display:block;margin:0 auto")
+                td
+                    a(href=item.imagePath,target="_blank")=item.imageName
+                td=item.imageDescription

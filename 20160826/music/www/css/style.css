@@ -1,0 +1,10 @@
+html{
+  font-size: 10px;
+}
+*{
+  font-family: "Microsoft YaHei UI";
+}
+.detailIcon{
+  font-size: 3rem;
+  margin: 2rem;
+}

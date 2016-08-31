@@ -1,0 +1,41 @@
+/**
+ * Created by 87676 on 8/25/2016.
+ */
+angular.module("app.routers",[])
+  .config(function ($stateProvider,$urlRouterProvider) {
+    $stateProvider
+      .state("menus",{
+        url:"/menus",
+        abstract:true,
+        templateUrl:"templates/menus.html",
+        controller:"menusController"
+      })
+      .state("menus.songList",{
+        url:"/songList",
+        views:{
+          "menus-content":{
+            templateUrl:"templates/songList.html",
+            controller:"songListController"
+          }
+        }
+      })
+      .state("menus.searchSong",{
+        url:"/searchSong",
+        views:{
+          "menus-content":{
+            templateUrl:"templates/searchSong.html",
+            controller:"searchSongController"
+          }
+        }
+      })
+      .state("menus.songDetail",{
+        url:"/songDetail/:id",
+        views:{
+          "menus-content":{
+            templateUrl:"templates/songDetail.html",
+            controller:"songDetailController"
+          }
+        }
+      });
+    $urlRouterProvider.otherwise("/menus/songList")
+  });

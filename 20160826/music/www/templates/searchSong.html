@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-header-bar class="bar bar-header bar-calm item-input-inset">
+      <label class="item-input-wrapper" style="border-radius: 50px">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="歌曲" ng-model="searchText">
+      </label>
+      <button class="button button-clear" ng-click="doSearch(searchText,true)">
+        搜索
+      </button>
+  </ion-header-bar>
+
+  <ion-content style="margin-bottom: 7%">
+    <ion-list>
+      <ion-item ng-repeat="obj in searchList" class="item-icon-right">
+        <div ng-click="playSong(obj)">
+          <p ng-bind="obj.filename" style="font-size: 1.8rem"></p>
+          <span ng-bind="obj.singername+obj.album_name" style="font-size: 1.4rem"></span>
+        </div>
+        <i class="icon {{(addedSong[searchList.indexOf(obj)])?'ion-android-done':'ion-android-add'}}" style="font-size: 28px; position:absolute; top:0;right: 11px;" ng-click="(addedSong[searchList.indexOf(obj)])?'':addToList(obj,searchList.indexOf(obj))"></i>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll on-infinite="doSearch(searchText)" distance="1%" ng-if="moreToLoad"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>
