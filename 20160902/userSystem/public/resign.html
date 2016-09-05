@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="node_modules/md5-js/md5.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/logInStyle.css">
+    <script src="javascripts/bootstrap.min.js"></script>
+</head>
+<body>
+<form id="form">
+    <div class="alert alert-danger" role="alert" id="warning">...</div>
+    <h4>注册</h4>
+    <div class="input-group login-input">
+        <span class="input-group-addon form-left-text" >用户名</span>
+        <input id="logName" name="logName" type="text" required="required" class="form-control" placeholder="请输入用户名" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group login-input">
+        <span class="input-group-addon form-left-text" >昵称</span>
+        <input id="niceName" name="niceName" type="text" required="required" class="form-control" placeholder="请输入昵称" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group login-input">
+        <span class="input-group-addon form-left-text" >密码</span>
+        <input id="password" name="password" type="password" required="required" class="form-control" placeholder="请输入密码" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group login-input">
+        <span class="input-group-addon form-left-text" >重复密码</span>
+        <input id="passwordRepeat" name="passwordRepeat" type="password" required="required" class="form-control" placeholder="请再次输入密码" aria-describedby="basic-addon1">
+    </div>
+    <input class="btn btn-default" id="btn" value="注册" type="submit">
+</form>
+
+
+
+<script src="javascripts/ResignMain.js"></script>
+</body>
+</html>

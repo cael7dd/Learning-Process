@@ -1,0 +1,42 @@
+#form{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 400px;
+    padding: 40px 50px;
+    box-shadow: 2px 2px 10px 0 #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.form-left-text{
+    width: 81px;
+}
+.login-input{
+    margin: 10px;
+}
+#btn{
+    display: block;
+    width: 92%;
+    margin-left: 10px;
+}
+#warning{
+    position: absolute;
+    width: 100%;
+    top:-46px;
+    padding: 12px;
+    left: 0;
+}
+@keyframes showAlert {
+    0%{
+        top:-46px;
+    }
+    10%{
+        top:0;
+    }
+    90%{
+        top:0;
+    }
+    100%{
+        top:-46px;
+    }
+}

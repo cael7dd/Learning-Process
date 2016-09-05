@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../javascripts/jquery.min.js"></script>
+    <script src="../node_modules/md5-js/md5.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <link rel="stylesheet" href="../stylesheets/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/personalStyle.css">
+    <script src="../javascripts/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="container" ng-app="app">
+    <div id="header" ng-controller="modifyData">
+        <h2>欢迎回来！<span id="niceNameContainer" ng-bind="data.niceName"></span></h2>
+        <h4 ng-bind="data.info"></h4>
+        <div class="btn-group input-margin">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                修改昵称 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropModifyList" role="menu">
+                <li class="input-group input-margin">
+                    <span class="input-group-addon">昵称</span>
+                    <input id="niceName" type="text" class="form-control" value="{{data.niceName}}"
+                           placeholder="Nicename" ng-blur="changeNiceName()">
+                </li>
+            </ul>
+        </div>
+        <div class="btn-group input-margin">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                修改简介 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropModifyList" role="menu">
+                <li class="input-group input-margin">
+                    <span class="input-group-addon">简介</span>
+                    <input id="resume" type="text" ng-blur="changeResume()" value="{{data.info}}" class="form-control"
+                           placeholder="Resume">
+                </li>
+            </ul>
+        </div>
+        <br>
+        <button type="button" class="btn btn-default" ng-click="showBlock=!showBlock">
+            修改密码
+        </button>
+        <button type="button" class="btn btn-default" ng-click="quit()">
+            安全退出
+        </button>
+        <div class="btn-group" id="modifyPassword" ng-if="showBlock">
+            <div class="alert alert-danger" role="alert" id="warning">...</div>
+            <div class="input-group input-margin ">
+                <span class="input-group-addon">原密码</span>
+                <input id="originPassword" type="password" class="form-control" placeholder="请输入原密码">
+            </div>
+            <div class="input-group input-margin ">
+                <span class="input-group-addon">新密码</span>
+                <input id="newPassword" type="password" class="form-control" placeholder="请输入新密码">
+            </div>
+            <div class="input-group input-margin ">
+                <span class="input-group-addon">再次输入新密码</span>
+                <input id="repeatPassword" type="password" class="form-control" placeholder="再次输入新密码">
+            </div>
+            <div class="input-group" style="margin-left: 5px">
+                <button type="button" class="btn btn-primary" ng-click="clickSave()" id="submitPass">save</button>
+                <button type="button" style="margin-left: 5px" class="btn btn-default" ng-click="cancel()">cancel
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="content"  ng-controller="contentController" ng-if="data.level>1">
+        <div ng-repeat="obj in memberData" class="contentBlock">
+            <h4>用户名:<span class="textColor">{{obj.logName}}</span></h4>
+            <h4>等级:<span class="textColor">{{obj.level}}</span></h4>
+            <h4>昵称:<span class="textColor">{{obj.niceName}}</span></h4>
+            <h4>简介:<span class="textColor">{{obj.info}}</span></h4>
+            <button type="button" ng-click="setAdmin(obj)" class="btn btn-primary" ng-if="obj.level==1&&data.level==3">设为管理员</button>
+            <button type="button" ng-click="cancelAdmin(obj)" class="btn btn-warning" ng-if="obj.level==2&&data.level==3">取消管理员</button>
+            <button type="button" ng-click="removeMember(obj)" class="btn btn-danger">删除</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="../javascripts/PersonalMain.js"></script>
+</body>
+</html>
